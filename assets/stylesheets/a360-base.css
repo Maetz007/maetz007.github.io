@@ -31,11 +31,15 @@ header, .page_heading {
 
 .example_content {
   position: absolute;
-  /* top: 30%; */
   left: 40%;
   border: 2px solid;
   border-radius: 4px;
   font-size: 15px;
+}
+
+.standardSelect {
+  position: absolute;
+  left: 30%;
 }
 
 .example_content button {
