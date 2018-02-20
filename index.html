@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/stylesheets/a360-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="assets/javascripts/a360-customDropDown.js"></script>
+    <title>Accordion Demo</title>
+  </head>
+  <header>
+    <a href='http://accessible360.com'><img src='assets/images/a360-logo.jpg' alt='Accessible360'></a>
+  </header>
+  <body>
+    <h1 class="page_heading">Example of an accessible custom select dropdown</h1>
+    <div class="example_wrapper">
+      <div class="example_content">
+        <!-- <span class="sr-only"> </span> -->
+        <button class="dropDown" id="expButton" type="button" aria-expanded="false" aria-controls="expContent">
+          <span class="move_left" id="b_text_1">Select Category</span>
+        </button>
+        <div id="expContent" class="dropDownContent" role="combobox">
+          <ul>
+            <li>
+              <a href="#" id="select_category" class="list_link" role="option">
+                <span class="link_text">All Categories</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" id="editorial" class="list_link" role="option">
+                <span class="link_text">Editorial</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" id="localNews" class="list_link" role="option">
+                <span class="link_text">Local News</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" id="nationalNews" class="list_link" role="option">
+                <span class="link_text">National News</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
