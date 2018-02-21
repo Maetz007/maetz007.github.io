@@ -18,38 +18,39 @@
   <body>
     <h1 class="page_heading">Example of an accessible custom select dropdown</h1>
     <div class="example_wrapper">
-      <div class="standardSelect">
-        <select class="standard" name="standard">
-          <option value="All Categories">All Categories</option>
-          <option value="Editorial">Editorial</option>
-          <option value="Local News">Local News</option>
-          <option value="National News">National News</option>
+      <!-- <div class="standardSelect">
+        <label for="selectButton" class="selectDrop">Select Category</label>
+        <select class="dropDown" id="selectButton" name="standard">
+          <option class="list_link" value="All Categories">All Categories</option>
+          <option class="list_link" value="Editorial">Editorial</option>
+          <option class="list_link" value="Local News">Local News</option>
+          <option class="list_link" value="National News">National News</option>
         </select>
-      </div>
-      <div class="example_content">
-        <!-- <span class="sr-only"> </span> -->
-        <button class="dropDown" id="expButton" type="button" aria-expanded="false" aria-controls="expContent">
+      </div> -->
+      <div class="example_content" role="listbox">
+        <button class="dropDown" id="expButton" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="expContent">
           <span class="move_left" id="b_text_1">Select Category</span>
+          <span class="selectIcon"></span>
         </button>
-        <div id="expContent" class="dropDownContent" role="combobox">
+        <div id="expContent" class="dropDownContent">
           <ul>
             <li>
-              <a href="#" id="select_category" class="list_link" role="option">
+              <a href="#" class="list_link" role="option">
                 <span class="link_text">All Categories</span>
               </a>
             </li>
             <li>
-              <a href="#" id="editorial" class="list_link" role="option">
+              <a href="#" class="list_link" role="option">
                 <span class="link_text">Editorial</span>
               </a>
             </li>
             <li>
-              <a href="#" id="localNews" class="list_link" role="option">
+              <a href="#" class="list_link" role="option">
                 <span class="link_text">Local News</span>
               </a>
             </li>
             <li>
-              <a href="#" id="nationalNews" class="list_link" role="option">
+              <a href="#" class="list_link" role="option">
                 <span class="link_text">National News</span>
               </a>
             </li>

@@ -8,14 +8,14 @@ $(document).ready(function(){
     $expElement = $(event.delegateTarget);
     $expControl = $('#' + $(this).attr('aria-controls'));
     var isExpanded = $(this).attr('aria-expanded');
-    if (isExpanded == 'true') {
+    if ( isExpanded == 'true' ) {
        $expControl.slideUp();
        $expElement.attr('aria-expanded', false);
     } else {
        $expControl.slideDown();
        $expElement.attr('aria-expanded', true);
-       $('.list_link').first().focus();
     }
+    $('a.list_link:first').focus();
   });
 
   $('.list_link').on('click', function(){
@@ -24,5 +24,19 @@ $(document).ready(function(){
     $($expElement).attr('aria-expanded', false);
     $('#' + $textId).text($newText);
     $('.dropDown').focus();
+  });
+
+  $('.dropDownContent').keydown(function(e) {
+    if ( e.keyCode == 38 ) {
+    $('.list_link:focus').closest('li').prev().find('a.list_link').focus();
+    }
+    if ( e.keyCode == 40 ) {
+      $('.list_link:focus').closest('li').next().find('a.list_link').focus();
+    }
+    if ( e.keyCode == 27 ) {
+      $expControl.slideUp();
+      $($expElement).attr('aria-expanded', false);
+      $('.dropDown').focus();
+    }
   });
 });
