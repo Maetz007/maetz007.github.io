@@ -85,7 +85,7 @@ span.fa {
   text-decoration: none;
 }
 
-a:focus, button:focus {
+a:focus {
   outline: thick ridge #4dee7d;
   z-index: 5px;
 }
