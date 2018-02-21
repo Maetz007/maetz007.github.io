@@ -36,6 +36,7 @@ $(document).ready(function(){
         $('#' + $textId).siblings().removeClass('fa-angle-up').addClass('fa-angle-down');
         $($expElement).attr('aria-expanded', false);
         $('.dropDown').focus();
+        break;
       case 32:
         $('.list_link').trigger('click');
         break
