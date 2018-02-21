@@ -23,7 +23,6 @@ $(document).ready(function(){
 
   $('.list_link').on('click', function(){
     var $newText = $(this).text();
-    $expElement.attr('aria-activeDescendant', $(this).attr('id'));
     $expControl.slideUp(100, 'linear');
     $('#' + $textId).siblings().removeClass('fa-angle-up').addClass('fa-angle-down');
     $($expElement).attr('aria-expanded', false);
@@ -49,10 +48,12 @@ $(document).ready(function(){
         $('.dropDown').focus();
         break;
       case 38:
-          $('.list_link:focus').closest('li').prev().find('.list_link').focus();
+        $('.list_link:focus').closest('li').prev().find('.list_link').focus();
+        $expElement.attr('aria-activeDescendant', $(this).attr('id'));
         break;
       case 40:
         $('.list_link:focus').closest('li').next().find('.list_link').focus();
+        $expElement.attr('aria-activeDescendant', $(this).attr('id'));
         break;
       default: // do nothing;
     }
