@@ -19,7 +19,7 @@ $(document).ready(function(){
        $('#' + $textId).siblings().removeClass('fa-angle-down').addClass('fa-angle-up');
     }
     // This if statement is just meant to keep focus on the button should the user shift-tab back to the button and close the dropdown.
-    if ( $('.dropDown').focus() ) {
+    if ( $('.dropDown').keydown() ) {
       $('.dropDown').focus();
     } else {
       $('a.list_link:first').focus();
