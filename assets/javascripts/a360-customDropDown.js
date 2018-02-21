@@ -18,10 +18,12 @@ $(document).ready(function(){
        $expElement.attr('aria-expanded', true);
        $('#' + $textId).siblings().removeClass('fa-angle-down').addClass('fa-angle-up');
     }
+    $('a.list_link:first').focus();
   });
 
   $('.list_link').on('click', function(){
     var $newText = $(this).text();
+    $expElement.attr('aria-activeDescendant', $(this).attr('id'));
     $expControl.slideUp(100, 'linear');
     $('#' + $textId).siblings().removeClass('fa-angle-up').addClass('fa-angle-down');
     $($expElement).attr('aria-expanded', false);
@@ -50,11 +52,7 @@ $(document).ready(function(){
           $('.list_link:focus').closest('li').prev().find('.list_link').focus();
         break;
       case 40:
-        if ( $(e.target).is('button') ) {
-          $('.list_link:first').focus();
-        } else {
         $('.list_link:focus').closest('li').next().find('.list_link').focus();
-        }
         break;
       default: // do nothing;
     }
